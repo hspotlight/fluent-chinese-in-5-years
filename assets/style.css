@@ -1019,8 +1019,105 @@ footer {
 .eb .cover img {
   display: block;
   width: 100%;
-  max-width: 640px;
+  max-width: 360px;
   height: auto;
   border-radius: 10px;
   border: 1px solid var(--line);
+}
+
+/* pricing */
+.pricing-note {
+  color: var(--mute);
+}
+.plans {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 880px;
+  margin-top: 28px;
+  align-items: stretch;
+}
+.plan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 32px 28px;
+}
+.plan-pro {
+  border: 2px solid var(--gold);
+  background: var(--ink-2);
+  box-shadow: 0 12px 40px rgba(224, 168, 69, 0.15);
+}
+.plan-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--ink);
+  font: 600 13px/1 var(--f-body);
+  padding: 8px 16px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.eb .plan p {
+  margin: 0;
+}
+.plan-name {
+  font: 500 13px/1 var(--f-mono);
+  letter-spacing: 0.14em;
+  color: var(--mute);
+}
+.eb .plan .plan-price {
+  margin: 16px 0 8px;
+  color: var(--mute);
+}
+.plan-price b {
+  font: 900 52px/1 var(--f-han);
+  color: var(--paper);
+}
+.plan-pro .plan-price b {
+  color: var(--gold);
+}
+.plan-desc {
+  color: var(--mute);
+  min-height: 3.4em;
+}
+.eb .plan ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 24px;
+  flex: 1;
+}
+.eb .plan li {
+  padding: 10px 0 10px 28px;
+  border-top: 1px dashed var(--line);
+  position: relative;
+  margin: 0;
+}
+.eb .plan li::before {
+  content: "✓";
+  position: absolute;
+  left: 4px;
+  color: var(--gold);
+}
+.plan-round {
+  font-size: 14px;
+  color: var(--gold-soft);
+  margin-bottom: 16px !important;
+}
+.plan .btn {
+  justify-content: center;
+  width: 100%;
+  padding: 16px;
+}
+@media (max-width: 760px) {
+  .plans {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 }
