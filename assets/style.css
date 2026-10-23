@@ -190,3 +190,16 @@ footer{border-top:1px solid var(--line);padding-block:32px;color:var(--mute);fon
 .cta-row .btn{font-size:17px;padding:16px 28px}
 .end{background:var(--panel);border:1px solid var(--gold);border-radius:12px;padding:28px;max-width:62ch;margin:16px 0}
 .end p{margin:0 0 6px}
+
+/* collapsible toggles (Notion-style) */
+.eb .cover{margin:32px 0 8px}
+.eb .cover img{display:block;width:100%;max-width:640px;border-radius:10px;border:1px solid var(--line)}
+.tg{border-top:1px solid var(--line)}
+.tg:last-of-type{border-bottom:0}
+.tg summary{list-style:none;cursor:pointer;display:flex;gap:14px;align-items:baseline;padding:22px 4px;font:900 clamp(20px,3vw,26px)/1.35 var(--f-han);text-wrap:balance}
+.tg summary::-webkit-details-marker{display:none}
+.tg summary::before{content:"▸";color:var(--gold);font-size:.8em;transition:transform .15s;flex:none}
+.tg[open] summary::before{transform:rotate(90deg)}
+.tg summary:hover{color:var(--gold-soft)}
+.tg .tgb{padding:0 4px 28px 30px}
+@media(prefers-reduced-motion:reduce){.tg summary::before{transition:none}}
