@@ -192,8 +192,6 @@ footer{border-top:1px solid var(--line);padding-block:32px;color:var(--mute);fon
 .end p{margin:0 0 6px}
 
 /* collapsible toggles (Notion-style) */
-.eb .cover{margin:32px 0 8px}
-.eb .cover img{display:block;width:100%;max-width:640px;border-radius:10px;border:1px solid var(--line)}
 .tg{border-top:1px solid var(--line)}
 .tg:last-of-type{border-bottom:0}
 .tg summary{list-style:none;cursor:pointer;display:flex;gap:14px;align-items:baseline;padding:22px 4px;font:900 clamp(20px,3vw,26px)/1.35 var(--f-han);text-wrap:balance}
@@ -203,3 +201,10 @@ footer{border-top:1px solid var(--line);padding-block:32px;color:var(--mute);fon
 .tg summary:hover{color:var(--gold-soft)}
 .tg .tgb{padding:0 4px 28px 30px}
 @media(prefers-reduced-motion:reduce){.tg summary::before{transition:none}}
+
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:16px 0 24px}
+.col{min-width:0}
+.col h4{font:600 17px/1.5 var(--f-body);margin:0 0 12px;color:var(--paper)}
+.col p{margin:0 0 12px}
+.col code{font:500 .9em/1.4 var(--f-mono);background:var(--panel);border:1px solid var(--line);color:var(--gold-soft);padding:2px 8px;border-radius:4px;white-space:nowrap}
+@media(max-width:760px){.cols{grid-template-columns:1fr}}
